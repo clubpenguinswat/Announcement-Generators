@@ -1,0 +1,40 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Unbounded:wght@900&display=swap');
+
+body {
+  background: #4F4F4F;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Unbounded';
+  font-weight: 900;
+}
+
+span {
+  color: tomato;
+}
+
+a {
+  color: #0394FC;
+  text-decoration: none;
+}
+
+label {
+  font-weight: 900;
+}
+
+pre {
+  background: black;
+  padding: 15px;
+  border-radius: 15px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
