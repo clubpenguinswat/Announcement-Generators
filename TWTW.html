@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>SWAT Event Generator</title>
+    <link href="Index.css" rel="stylesheet" type="text/css" />
+
+  </head>
+
+  <body>
+
+    <h1>SWAT "The Week That Was" Generator!</h1>
+    <p>You can generate SWAT TWTWs quickly and easily here. Provide some information, and we will generate a TWTW announcement for you! We have automatically filled in some sample information to help you out!</p>
+    <p>Please note that we have not added consecutive streak feature in this generator, yet. Please consider adding them manually before posting. Also, make sure you do the 3 required attachments: Top Ten Image, Top Ten Elaborate Image, and the Amari Weekly Race Image!</p>
+
+    <h2>Input</h2>
+
+    <label>Edition Number</label>
+    <input type="number" value="8" oninput="Set('EditionNumber', this.value)"></input>
+
+    <br>
+
+    <label>Top Ten Ranking</label>
+    <input value="7" oninput="Set('TopTenRanking', this.value)"></input>
+
+    <br>
+
+    <label>Top Ten Score</label>
+    <input type="number" value="20.00" oninput="Set('TopTenScore', this.value)"></input>
+    <br>
+
+    <br>
+
+    <label>Top Ten Link</label>
+    <input type="url" value="https://www.cparmies.org/2023/11/19/top-ten-armies-november-11th-november-18th/" oninput="Set('TopTenLink', this.value)"></input> minutes
+
+    <br>
+
+    <label>UID of the HCOM of the Week</label>
+    <input type="number" value="1098907223977099304" oninput="Set('HCOMOfTheWeek', this.value)"></input> rooms
+
+    <br>
+
+    <label>UID of the Staff Member of the Week</label>
+    <input type="number" value="1098907223977099304" oninput="Set('StaffMemberOfTheWeek', this.value)"></input>
+
+    <br>
+
+    <label>UID of the Agent of the Week</label>
+    <input type="number" value="1098907223977099304" oninput="Set('AgentOfTheWeek', this.value)"></input>
+
+    <br>
+
+    <label>UID of the Recruiter of the Week</label>
+    <input type="number" value="1098907223977099304" oninput="Set('RecruiterOfTheWeek', this.value)"></input>
+
+    <br>
+
+    <br>
+    <br>
+
+    <h2>Output</h2>
+
+    <button onclick="CopyOutput(this)">Copy</button>
+
+    <pre id="Output" contenteditable>@everyone
+Hello, agents!
+
+# <:SWAT:1052096770815053854> ` The <span class="EditionNumber"></span> Edition ` The Week That Was!
+SWAT had an incredible week, with events where we showed improvement!
+
+## <:SWATGoggles:1050485132651417650> SWAT places #<span class="TopTenRanking"></span> on the Weekly Top Ten by CPA!
+SWAT scored a total of `<span class="TopTenPoints"></span>` points in the past week.
+Refer to the images below for more information and comparison. SWAT had achieved this rank in the past 3 Weekly Top Ten Rankings, as well!
+
+[View their announcement!](<span class="TopTenLink">https://www.cparmies.org/2023/11/19/top-ten-armies-november-11th-november-18th/</span> "Click or tap to redirect yourself to CPA's Top Ten for the past week!")
+
+&lt;@&1052096770815053854&gt;
+> &lt;@1052096770815053854&gt;
+> The one that approaches timely!
+
+&lt;@&1052096770815053854&gt;
+> &lt;@1052096770815053854&gt;
+> Greatly responsive and seeks opportunities!
+
+&lt;@&1052096770815053854&gt;
+> &lt;@1052096770815053854&gt;
+> The one that does the magic!
+
+&lt;@&1052096770815053854&gt;
+> &lt;@1052096770815053854&gt;
+> Assistive and Assertive.
+
+` + ` <@&1175738539367989308>
+> This role has been granted to the aforementioned winners.
+
+## &lt;:SWATGoggles:1050485132651417650&gt; The Amari Weekly XP Race!
+> Being active in the server grants XP!
+
+` 1 ` &lt;@&1052096770815053854&gt;
+> &lt;@1052096770815053854&gt;
+> The one that motivates!
+` 2 ` &lt;@&1052096770815053854&gt;
+> &lt;@1052096770815053854&gt;
+> The one that complements!
+` 3 ` &lt;@&1052096770815053854&gt;
+> &lt;@1052096770815053854&gt;
+> The one that heals!
+
+` + ` &lt;@&1052096770815053854&gt;
+> This role has been granted to the Weekly XP Race winners!
+
+Congratulations to SWAT for their emerging activity this week! Anyone can bring their names to the list, only if they have the valiance to reach similar heights. We know you will try your best, if not today, tomorrow!
+
+&lt;:SWAT:1052096770815053854&gt; Thank you,
+&lt;:SWAT:1052096770815053854&gt; The SWAT Corporation!
+</pre>
+
+    <script src="TWTW.js"></script>
+
+  </body>
+
+</html>
