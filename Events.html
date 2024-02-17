@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>SWAT Event Generator</title>
+    <link href="Index.css" rel="stylesheet" type="text/css" />
+
+  </head>
+
+  <body>
+
+    <h1>SWAT Event Generator!</h1>
+    <p>You can generate SWAT events quickly and easily here. Provide some information, and we will generate an event announcement for you! We have automatically filled in some sample information to help you out!</p>
+
+    <h2>Input</h2>
+
+    <label>Event Number</label>
+    <input type="number" value="20" oninput="Set('EventNumber', this.value)"></input>
+
+    <br>
+
+    <label>Event Title</label>
+    <input value="Helmet Rebirth" oninput="Set('EventTitle', this.value)"></input>
+
+    <br>
+
+    <label>Event Time (in Epoch Timestamp)</label>
+    <input type="number" value="1696532400" oninput="Set('EventTime', this.value)"></input> <a href="https://www.unixtimestamp.com/" target="_blank">Need to find a timestamp?</a>
+    <br>
+    <span class="InterprettedEventTime">Calculating Event Time...</span>
+
+    <br>
+
+    <label>Event Duration</label>
+    <input type="number" value="30" oninput="Set('EventDuration', this.value)"></input> minutes
+
+    <br>
+
+    <label>Event Room Count</label>
+    <input type="number" value="3" oninput="Set('EventRoomCount', this.value)"></input> rooms
+
+    <br>
+
+    <label>Event Server</label>
+    <input value="Battleground" oninput="Set('EventServer', this.value)"></input>
+
+    <br>
+
+    <label>Event Initial Room</label>
+    <input value="Snow Forts" oninput="Set('EventInitialRoom', this.value)"></input>
+
+    <br>
+
+    <label>Event Uniform</label>
+    <select oninput="Set('EventUniform', this.value)">
+      <option value="Normal SWAT Outfit">Normal SWAT Outfit</option>
+      <option value="SWAT Arctic Ops Outfit">SWAT Arctic Ops</option>
+      <option value="SWAT Strikers Outfit">SWAT Strikers</option>
+    </select>
+
+    <br>
+
+    <label>Event Discord Event Link</label>
+    <input value="https://discord.com/events/715178450716983326/1159097829793472573" oninput="Set('EventDiscordEventLink', this.value)" size="69"></input>
+
+    <br>
+    <br>
+
+    <h2>Output</h2>
+
+    <button onclick="CopyOutput(this)">Copy</button>
+
+    <pre id="Output" contenteditable>@everyone
+Hello, agents! SWAT would like to introduce an upcoming event.
+
+## Event ` <span class="EventNumber">20</span> `
+# &lt;:SWATGoggles:1050485132651417650&gt; ` <span class="EventTitle">Helmet Rebirth</span> `!
+# &lt;t:<span class="EventTime">1696532400</span>:F&gt;, &lt;t:<span class="EventTime">1696532400</span>:R&gt;
+
+&lt;:SWAT:1052096770815053854&gt; **Game:** **[CPAB:](https://play.cpabattleground.com "This is the game the event will be hosted in. Click or tap to redirect yourself to CPAB: Club Penguin Army Battleground!")** https://play.cpabattleground.com/
+&lt;:SWAT:1052096770815053854&gt; **Time:** &lt;t:<span class="EventTime">1696532400</span>:F&gt;, &lt;t:<span class="EventTime">1696532400</span>:R&gt;
+&lt;:SWAT:1052096770815053854&gt; **Duration:** <span class="EventDuration">30</span> minutes
+&lt;:SWAT:1052096770815053854&gt; **Rooms:** <span class="EventRoomCount">3</span> rooms
+&lt;:SWAT:1052096770815053854&gt; **Server:** `<span class="EventServer">Battleground</span>`
+&lt;:SWAT:1052096770815053854&gt; **Initial Room:** `<span class="EventInitialRoom">Snow Forts</span>`
+&lt;:SWAT:1052096770815053854&gt; **Uniform** `<span class="EventUniform">Normal SWAT Outfit</span>` _`!army <span class="EventUniformCommand">SWAT</span>`_
+
+> **[A discord event has been scheduled.](<span class="EventDiscordEventLink">https://discord.com/events/715178450716983326/1159097829793472573</span> "The scheduled discord event can be expanded for further details. Click or tap to do so.")**
+> <span class="EventDiscordEventLink">https://discord.com/events/715178450716983326/1159097829793472573</span>
+
+> **Please click or tap ` Interested ` in the Discord event card below to confirm your attendance. Reactions do not count towards your the confirmation of your attendance.**
+
+**&lt;:ET_Music:1050487576814960680&gt; Have fun!**</pre>
+
+    <script src="Events.js"></script>
+
+  </body>
+
+</html>
